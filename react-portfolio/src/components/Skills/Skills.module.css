@@ -1,0 +1,166 @@
+
+:root {
+    --bg: #e3e4e8;
+    --fg: #17181c;
+    --formBg: #fff;
+    --radioBg: #fff;
+    --radioBgActive: #e3e4e8;
+    --radioBorder: #c7cad1;
+    --radioBorderActive: #c7cad1;
+    --radioSide: #c7cad1;
+    --primary1: #0b46da;
+    --primary2: #255ff4;
+    --primary3: #5583f6;
+    --primary4: #86a6f9;
+    --depth: -4.5em;
+    --ballDiam: 0.75em;
+    --xAngle: -30deg;
+    --yAngle: 45deg;
+    --yAngle1: 20deg;
+    --yAngle2: 35deg;
+    --xAngle1: -10deg;
+    --xAngle2: -20deg;
+}
+
+
+
+.background {
+    background: linear-gradient(#2e0e36, #171b3d);
+    overflow: hidden;
+    top: auto;
+    bottom: auto;
+    right:auto;
+    left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+}
+.space {
+    background-image: url("./img/Space.jpg");
+    overflow: hidden;
+    top: auto;
+    bottom: auto;
+    right:auto;
+    left: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.scrollText {
+    font-size: 5em;
+
+}
+
+.card {
+    height: 20rem;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.parallax {
+    margin-right: 5%;
+}
+
+.sticky {
+    margin-left: 1%;
+    background-color: #ff6d6d;
+}
+
+.blue {
+    background-color: #5b65ad;
+    color: white;
+}
+
+.purple {
+    background-color: #9d65d0;
+}
+
+@media (max-width: 750px) {
+    .card {
+        width: 40%;
+    }
+
+    .parallax {
+        margin-right: 1.5rem;
+    }
+
+    .sticky {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+.imageMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 5%;
+    height: 20%;
+}
+
+.jump{
+    margin: auto;
+}
+
+.text{
+    font-size: 1.5em;
+    margin-top: 120px;
+}
+
+.imageContent{
+    box-shadow: 0 0 0 0.1em var(--radioBorder) inset;
+    max-width: 30em;
+    margin: 4.5em auto 1.5em auto;
+    padding: 1.5em;
+    text-align: left;
+    transform: rotateX(0) rotateY(0) translateZ(calc(var(--depth) / -2));
+    -webkit-box-shadow: below 1px liner-gradient(transparent , #0008) ;
+    transition: transform 0.25s linear ;
+    animation:  animate 5s linear infinite;
+    animation-duration: 20s;
+    animation-name: slidein;
+}
+@keyframes slidein{
+    10%{
+        box-shadow:
+                -0.25em -0.25em 0 var(--radioSide),
+                0 0 0 0.1em var(--radioBorder) inset,
+                -0.25em -0.25em 0.25em #0005;
+        transform: rotateX(var(--xAngle1)) rotateY(var(--yAngle1)) translateZ(calc(var(--depth) / -2));
+    }
+    40%{
+        box-shadow:
+                -0.25em -0.25em 0 var(--radioSide),
+                0 0 0 0.1em var(--radioBorder) inset,
+                -0.25em -0.25em 0.25em #0005;
+        transform: rotateX(var(--xAngle2)) rotateY(var(--yAngle2)) translateZ(calc(var(--depth) / -2));
+    }
+    80%{
+        box-shadow:
+                -0.25em -0.25em 0 var(--radioSide),
+                0 0 0 0.1em var(--radioBorder) inset,
+                -0.25em -0.25em 0.25em #0005;
+        transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translateZ(calc(var(--depth) / -2));
+    }
+    100%{
+        box-shadow:
+                -0.25em -0.25em 0 var(--radioSide),
+                0 0 0 0.1em var(--radioBorder) inset,
+                -0.25em -0.25em 0.25em #0005;
+        transform: rotateX(0) rotateY(0) translateZ(calc(var(--depth) / -2));
+    }
+}
+

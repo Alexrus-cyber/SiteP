@@ -1,10 +1,10 @@
 import React from "react";
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {ArrowRightCircle} from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
 import {useState, useEffect} from "react";
-import '../components/Banner/Banner.css';
-import comet from '../assets/img/comet.png';
+import  './Banner/Banner.css';
+import {Parallax} from "@react-spring/parallax";
 
 export const Banner = () => {
     const [loopNum, setLoopName] = useState(0);
@@ -44,10 +44,7 @@ export const Banner = () => {
 
   return (
       <section className={'banner'} id={'home'}>
-        {/*  <div className={'stars'}>
-              <img src={comet}/>
-          </div>*/}
-          <Container>
+            <div className={'container'}>
               <Row className={'align-items-center'}>
                   <Col xs={12} md={6} xl={7}>
                       <span className={'tagline'}>Welcome to my portfolio</span>
@@ -59,7 +56,8 @@ export const Banner = () => {
                       <img className={'main-image'} src={headerImg} alt={'Header IMG'}/>
                   </Col>
               </Row>
-          </Container>
+
+            </div>
       </section>
   );
 }
