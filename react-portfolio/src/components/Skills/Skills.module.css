@@ -116,7 +116,15 @@
 }
 
 .text{
+    color: #03ffd3;
+    font-weight: 700;
     font-size: 1.5em;
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 0.7em;
+    outline: none;
+    animation:  animate 5s linear infinite;
     margin-top: 120px;
 }
 

@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useEffect } from "react";
 import {ArrowRightCircle} from "react-bootstrap-icons";
 import headerImg from "./Skills/img/skyball.png";
 import IMG from "./Skills/img/csshtml.jpg";
@@ -6,8 +6,24 @@ import IMG2 from "./Skills/img/react.jpg";
 import IMG3 from "./Skills/img/node.jpeg";
 import styles from './Skills/Skills.module.css';
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
+import {gsap} from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const Skills = () => {
+    const ref = useRef(null);
+    useEffect(() => {
+        gsap.to("#skills", {
+            duration: "100%",
+            triggerHook: 1,
+            scrollTrigger: {
+                trigger: ".skill",
+                scrollTrigger: {
+                    trigger: ".skill",
+                }
+            }
+        });
+    }, []);
+
 
     const alignCenter = { display: 'flex', alignItems: 'center' , justifyContent: 'center' }
     const alignCenter1 = { display: 'flex', alignItems: 'top' }
@@ -29,7 +45,7 @@ export const Skills = () => {
                     </div>
                 </ParallaxLayer>
 
-                <ParallaxLayer  offset={1} speed={1.5} style={{ ...alignCenter1, justifyContent: 'flex-end' }}>
+                <ParallaxLayer  offset={1} speed={0.5} style={{ ...alignCenter1, justifyContent: 'flex-end' }}>
                        <div  className={`${styles.card} ${styles.parallax}`}>
                            <div className={styles.imageContent}>
                                <img src={IMG}/>
@@ -54,7 +70,6 @@ export const Skills = () => {
                         </div>
                     </div>
                 </ParallaxLayer>
-
                 <ParallaxLayer offset={3} speed={0.5} factor={1/2} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
                     <div  className={`${styles.card} ${styles.parallax}`}>
                         <div className={styles.imageContent}>
