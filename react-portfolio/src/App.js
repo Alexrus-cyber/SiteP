@@ -12,7 +12,7 @@ function App() {
       <NavBar/>
         <Banner text1={'Hi im  webdecoded'}/>
         <Skills/>
-      <Slider/>
+     <Slider/>
     </div>
   );
 }

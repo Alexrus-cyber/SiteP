@@ -44,11 +44,12 @@ export const Banner = () => {
 
   return (
       <section className={'banner'} id={'home'}>
+
             <div className={'container'}>
               <Row className={'align-items-center'}>
                   <Col xs={12} md={6} xl={7}>
                       <span className={'tagline'}>Welcome to my portfolio</span>
-                      <h1>Привет я Алексей, <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Реакт разработчик", "Веб дизайнер", "UI/UX дизайнер" ]'></span><span  className="wrap">{text}</span></h1>
+                      <h1>Привет я Алексей, <span className="txt-rotate" data-rotate='[ "Реакт разработчик", "Веб дизайнер", "UI/UX дизайнер" ]'></span><span  className="wrap">{text}</span></h1>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <button onClick={() => console.log('connect')}>Let connect <ArrowRightCircle size={25}/> </button>
                   </Col>
